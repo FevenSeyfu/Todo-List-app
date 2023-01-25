@@ -1,11 +1,11 @@
-/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
-import express from 'express';
-import webpack from 'webpack';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import config, { output } from './webpack.config.js';
+/* eslint-disable import/no-extraneous-dependencies */
+const express = require('express');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
 
 const app = express();
+const config = require('./webpack.config.js');
 
 const compiler = webpack(config);
 
@@ -13,7 +13,7 @@ const compiler = webpack(config);
 // configuration file as a base.
 app.use(
   webpackDevMiddleware(compiler, {
-    publicPath: output.publicPath,
+    publicPath: config.output.publicPath,
   }),
 );
 
