@@ -27,10 +27,15 @@ const todoTasks = [
 const AddTask = () => {
   const tasks = Object.keys(todoTasks);
   tasks.forEach((task) => {
-    // taskList.innerHTML = `<li class="list-item">${todoTasks[task].description}</li>`;
     const taskList = document.createElement('li');
-    taskList.classList.add('list-item');
-    taskList.innerText = todoTasks[task].description;
+    taskList.innerHTML = `
+      <li class="list-item">
+        <label class="checkbox-label">
+          <input type="checkbox" name="${todoTasks[task].index}" id="">
+          ${todoTasks[task].description}
+        </label>
+      </li>
+      <hr>`;
     taskListContainer.appendChild(taskList);
   });
 };
