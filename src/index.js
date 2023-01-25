@@ -5,7 +5,7 @@ const todoTasks = [
   {
     description: 'Task one',
     completed: true,
-    index: 0,
+    index: 4,
   },
   {
     description: 'Task two',
@@ -26,6 +26,7 @@ const todoTasks = [
 
 const AddTask = () => {
   const tasks = Object.keys(todoTasks);
+  todoTasks.sort((a, b) => a.index - b.index);
   tasks.forEach((task) => {
     const taskList = document.createElement('li');
     taskList.innerHTML = `
