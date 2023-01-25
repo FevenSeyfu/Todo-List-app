@@ -30,12 +30,12 @@ const AddTask = () => {
     const taskList = document.createElement('li');
     taskList.innerHTML = `
       <li class="list-item">
+        <hr>
         <label class="checkbox-label">
           <input type="checkbox" name="${todoTasks[task].index}" id="">
           ${todoTasks[task].description}
         </label>
-      </li>
-      <hr>`;
+      </li>`;
     taskListContainer.appendChild(taskList);
   });
 };
