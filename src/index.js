@@ -3,22 +3,22 @@ import './style.css';
 const taskListContainer = document.getElementById('todoListPlaceholder');
 const todoTasks = [
   {
-    description: 'finish writing',
+    description: 'Task one',
     completed: true,
     index: 0,
   },
   {
-    description: 'write code',
+    description: 'Task two',
     completed: true,
     index: 1,
   },
   {
-    description: 'play',
+    description: 'Task three',
     completed: false,
     index: 2,
   },
   {
-    description: 'run',
+    description: 'Task four',
     completed: true,
     index: 3,
   },
