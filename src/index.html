@@ -8,13 +8,16 @@
 <body>
   <div class="container">
     <header class="pl-2">
-			<h1 class="header-text">Today's To Do</h1>
-			<hr>
+			<div class="parent">
+				<h1 class="header-text">Today's To Do</h1>
+				<img src=<%=require("./refresh-icon.png")%> alt="refresh icon" class="icon">
+			</div>
+			<hr class="m1">
 		</header>
-		<form action="" class="pl-2">
-			<label for="Add-task">
-				<input type="text" class="input-task" name="Add-task" placeholder="Add to your list ...">
-			</label>
+		<form action=""  class="pl-2" id="task-form">
+			<label for="Add-task" class="parent add-task-label">
+				<input type="text" class="input-task" name="Add-task" id="Add-task" placeholder="Add to your list ...">
+      </label>
       <ul id="todoListPlaceholder"></ul>
 		</form>
 		<button class="clear-tasks" type="reset">Clear all completed</button>

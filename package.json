@@ -9,7 +9,7 @@
     "build": "webpack --mode=development",
     "start": "webpack serve --open",
     "predeploy": "npm run build",
-		"deploy": "gh-pages -b main -d build"
+    "deploy": "gh-pages -b main -d build"
   },
   "repository": {
     "type": "git",
@@ -42,5 +42,17 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "output": {
+    "filename": "[name].bundle.js",
+    "path": "path.resolve(__dirname, 'dist')",
+    "clean": true,
+    "publicPath": "/"
+  },
+	"devServer": {
+    "static": "./dist"
+  },
+	"optimization": {
+    "runtimeChunk": "single"
   }
 }

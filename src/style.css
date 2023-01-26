@@ -27,11 +27,14 @@ h1 {
 }
 
 hr {
-  margin: 1rem 0;
   background-color: #f3f3f3;
   border: none;
   height: 2px;
   width: 100%;
+}
+
+.m1 {
+  margin: 1rem 0;
 }
 
 .input-task {
@@ -44,9 +47,32 @@ hr {
   list-style-type: none;
 }
 
+.list-item {
+  padding: 0.5rem 0;
+}
+
 .checkbox-label {
   padding-left: 0.5rem;
   font-size: 1rem;
+}
+
+.add-task-label {
+  width: 100%;
+  background-image: url(./down-arrow.png);
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon {
+  position: relative;
+  height: 1rem;
 }
 
 .clear-tasks {
@@ -57,4 +83,13 @@ hr {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f3f3f3;
   margin-top: 1rem;
+}
+
+.Tasks-view,
+.Tasks-view:active,
+.Tasks-view:focus {
+  border: none;
+  outline: none;
+  background-color: rgba(251, 251, 177, 0.704);
+  font-size: 1rem;
 }
