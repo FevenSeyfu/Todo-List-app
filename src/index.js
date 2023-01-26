@@ -16,10 +16,10 @@ const displayTask = () => {
       <hr>
       <li class="list-item parent">
         <label class="checkbox-label">
-          <input type="checkbox" name="${task.index}" id="">
+          <input type="checkbox" name="${task.index}" data-id="${task.index}">
           ${task.description}
         </label>
-        <img src="${dotsIcon}" alt="show more icon" class="icon">
+        <img src="${dotsIcon}" alt="show more icon" class="icon show-detail">
       </li>`;
   });
 };
@@ -31,4 +31,16 @@ window.addEventListener('load', (e) => {
 taskForm.addEventListener('submit', (e) => {
   e.preventDefault();
   addTask(input);
+});
+document.body.addEventListener('click', (e) => {
+  if (e.target.classList.contains('show-detail')) {
+    e.preventDefault();
+    if (e.target.getAttribute('src') !== 'https://img.icons8.com/ios/50/null/delete--v1.png') {
+      e.target.setAttribute('src', 'https://img.icons8.com/ios/50/null/delete--v1.png');
+      e.target.parentNode.style.backgroundColor = 'rgba(251, 251, 177, 0.704)';
+    } else {
+      e.target.setAttribute('src', dotsIcon);
+      e.target.parentNode.style.backgroundColor = 'white';
+    }
+  }
 });

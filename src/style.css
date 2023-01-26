@@ -27,11 +27,14 @@ h1 {
 }
 
 hr {
-  margin: 1rem 0;
   background-color: #f3f3f3;
   border: none;
   height: 2px;
   width: 100%;
+}
+
+.m1 {
+  margin: 1rem 0;
 }
 
 .input-task {
@@ -42,6 +45,10 @@ hr {
 
 #todoListPlaceholder {
   list-style-type: none;
+}
+
+.list-item {
+  padding: 0.5rem 0;
 }
 
 .checkbox-label {
