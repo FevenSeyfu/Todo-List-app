@@ -2,7 +2,7 @@ const addTask = (input) => {
   const todoTasks = JSON.parse(localStorage.getItem('todoTasksList')) || [];
   const newTask = {
     description: input.value,
-    completed: true,
+    completed: false,
     index: todoTasks.length + 1,
   };
   todoTasks.push(newTask);
