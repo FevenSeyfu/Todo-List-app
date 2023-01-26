@@ -49,6 +49,25 @@ hr {
   font-size: 1rem;
 }
 
+.add-task-label {
+  width: 100%;
+  background-image: url(./down-arrow.png);
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon {
+  position: relative;
+  height: 1rem;
+}
+
 .clear-tasks {
   border: none;
   width: 100%;

@@ -1,4 +1,5 @@
 import './style.css';
+import dotsIcon from './dots.png';
 
 const taskListContainer = document.getElementById('todoListPlaceholder');
 const todoTasks = [
@@ -30,12 +31,13 @@ const AddTask = () => {
   tasks.forEach((task) => {
     const taskList = document.createElement('li');
     taskList.innerHTML = `
-      <li class="list-item">
-        <hr>
+      <hr>
+      <li class="list-item parent">
         <label class="checkbox-label">
           <input type="checkbox" name="${todoTasks[task].index}" id="">
           ${todoTasks[task].description}
         </label>
+        <img src="${dotsIcon}" alt="show more icon" class="icon">
       </li>`;
     taskListContainer.appendChild(taskList);
   });
