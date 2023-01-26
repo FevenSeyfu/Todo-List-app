@@ -1,14 +1,47 @@
- import _ from 'lodash';
 import './style.css';
 
- function component() {
-   const element = document.createElement('div');
+const taskListContainer = document.getElementById('todoListPlaceholder');
+const todoTasks = [
+  {
+    description: 'Task one',
+    completed: true,
+    index: 4,
+  },
+  {
+    description: 'Task two',
+    completed: true,
+    index: 1,
+  },
+  {
+    description: 'Task three',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'Task four',
+    completed: true,
+    index: 3,
+  },
+];
 
-   // Lodash, now imported by this script
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+const AddTask = () => {
+  const tasks = Object.keys(todoTasks);
+  todoTasks.sort((a, b) => a.index - b.index);
+  tasks.forEach((task) => {
+    const taskList = document.createElement('li');
+    taskList.innerHTML = `
+      <li class="list-item">
+        <hr>
+        <label class="checkbox-label">
+          <input type="checkbox" name="${todoTasks[task].index}" id="">
+          ${todoTasks[task].description}
+        </label>
+      </li>`;
+    taskListContainer.appendChild(taskList);
+  });
+};
 
-   return element;
- }
-
- document.body.appendChild(component());
+window.addEventListener('load', (e) => {
+  e.preventDefault();
+  AddTask();
+});
