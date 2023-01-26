@@ -19,7 +19,7 @@ const displayTask = () => {
       <li class="list-item parent">
         <label class="checkbox-label" data-id="${task.index}">
           <input type="checkbox" name="${task.index}">
-          ${task.description}
+          <span class="label-text">${task.description}</span>
         </label>
         <img src="${dotsIcon}" alt="show more icon" class="icon show-detail">
       </li>`;
