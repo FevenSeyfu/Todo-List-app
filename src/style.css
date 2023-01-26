@@ -84,3 +84,12 @@ hr {
   background-color: #f3f3f3;
   margin-top: 1rem;
 }
+
+.Tasks-view,
+.Tasks-view:active,
+.Tasks-view:focus {
+  border: none;
+  outline: none;
+  background-color: rgba(251, 251, 177, 0.704);
+  font-size: 1rem;
+}
