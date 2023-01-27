@@ -31,7 +31,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Javascript Hackathon Landing page <a name="about-project"></a>
+# 📖 About Project <a name="about-project"></a>
 
 
 **[Todo-List-app]** is a minimalistic todo list website, it helps to list down tasks and organize tasks. It simply lists the things that you need to do and allows you to mark them as complete.
@@ -52,7 +52,7 @@
 
 - **[ Dynamically List of tasks]**
 - **[ Add or remove tasks]**
-- **[mark tasks complete]**
+- **[mark tasks as completed]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
