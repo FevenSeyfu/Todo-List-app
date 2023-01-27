@@ -3,6 +3,7 @@ import dotsIcon from './dots.png';
 import addTask from './Add-task.js';
 import removetask from './remove-task.js';
 import editDescription from './edit-task.js';
+import './Interactive.js';
 
 const taskListContainer = document.getElementById('todoListPlaceholder');
 const taskForm = document.getElementById('task-form');

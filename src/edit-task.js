@@ -6,7 +6,7 @@ const editDescription = (taskID, e, label) => {
   selectedTask.setAttribute('type', 'text');
   selectedTask.setAttribute('value', oldTask);
   selectedTask.classList.add('Tasks-view');
-  label.style.display = 'none';
+  selectedTask.nextElementSibling.style.display = 'none';
   taskForm.addEventListener('change', () => {
     const todoTasks = JSON.parse(localStorage.getItem('todoTasksList')) || [];
     const id = parseFloat(taskID);
