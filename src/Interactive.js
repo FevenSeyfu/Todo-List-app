@@ -23,7 +23,6 @@ const clearAllCompleted = () => {
   completed.forEach((task) => {
     removetask(task.index);
   });
-  // localStorage.setItem('todoTasksList', JSON.stringify(todoTasks));
 };
 
 export { checkStatus, clearAllCompleted };
