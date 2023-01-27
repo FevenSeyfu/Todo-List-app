@@ -1,3 +1,5 @@
+import removetask from './remove-task.js';
+
 const checkStatus = (task, id) => {
   const todoTasks = JSON.parse(localStorage.getItem('todoTasksList')) || [];
   if (task.checked) {
@@ -18,9 +20,10 @@ const checkStatus = (task, id) => {
 const clearAllCompleted = () => {
   const todoTasks = JSON.parse(localStorage.getItem('todoTasksList')) || [];
   const completed = todoTasks.filter((task) => task.completed === true);
-	
-  localStorage.setItem('todoTasksList', JSON.stringify(todoTasks));
-  window.location.reload();
+  completed.forEach((task) => {
+    removetask(task.index);
+  });
+  // localStorage.setItem('todoTasksList', JSON.stringify(todoTasks));
 };
 
 export { checkStatus, clearAllCompleted };
