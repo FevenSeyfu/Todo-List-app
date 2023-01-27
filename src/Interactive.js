@@ -1,6 +1,6 @@
 const checkStatus = (status) => {
   if (status) {
-    
+    //
   }
 };
 
