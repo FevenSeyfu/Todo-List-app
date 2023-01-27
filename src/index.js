@@ -36,6 +36,7 @@ taskForm.addEventListener('submit', (e) => {
 });
 document.body.addEventListener('click', (e) => {
   const { parentNode } = e.target;
+  const label = document.querySelector('.label-text');
   if (e.target.classList.contains('show-detail')) {
     e.preventDefault();
     if (e.target.getAttribute('src') !== 'https://img.icons8.com/ios/50/null/delete--v1.png') {
@@ -43,7 +44,7 @@ document.body.addEventListener('click', (e) => {
       e.target.classList.add('remove-btn');
       parentNode.style.backgroundColor = 'rgba(251, 251, 177, 0.704)';
       const taskID = parentNode.firstElementChild.getAttribute('data-id');
-      editDescription(taskID, parentNode);
+      editDescription(taskID, parentNode, label);
       document.body.addEventListener('click', (e) => {
         if (e.target.classList.contains('remove-btn')) {
           removetask(taskID);

@@ -1,11 +1,12 @@
 const taskForm = document.getElementById('task-form');
 
-const editDescription = (taskID, e) => {
+const editDescription = (taskID, e, label) => {
   const selectedTask = e.firstElementChild.firstElementChild;
   const oldTask = selectedTask.parentNode.innerText;
   selectedTask.setAttribute('type', 'text');
   selectedTask.setAttribute('value', oldTask);
   selectedTask.classList.add('Tasks-view');
+  label.style.display = 'none';
   taskForm.addEventListener('change', () => {
     const todoTasks = JSON.parse(localStorage.getItem('todoTasksList')) || [];
     const id = parseFloat(taskID);
