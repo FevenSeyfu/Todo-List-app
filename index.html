@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List App</title>
-<script defer src="/runtime.js"></script><script defer src="/index.js"></script></head>
+<script defer src="/Todo-List-app/runtime.js"></script><script defer src="/Todo-List-app/index.js"></script></head>
 <body>
   <div class="container">
     <header class="pl-2">
-			<h1 class="header-text">Today's To Do</h1>
-			<hr>
+			<div class="parent">
+				<h1 class="header-text">Today's To Do</h1>
+				<img src=<%=require("./refresh-icon.png")% alt="refresh icon" class="icon">
+			</div>
+			<hr class="m1">
 		</header>
-		<form action="" class="pl-2">
-			<label for="Add-task">
-				<input type="text" class="input-task" name="Add-task" placeholder="Add to your list ...">
-			</label>
+		<form action=""  class="pl-2" id="task-form">
+			<label for="Add-task" class="parent add-task-label">
+				<input type="text" class="input-task" name="Add-task" id="Add-task" placeholder="Add to your list ...">
+      </label>
       <ul id="todoListPlaceholder"></ul>
 		</form>
-		<button class="clear-tasks" type="reset">Clear all completed</button>
+		<button class="clear-tasks" id="clear-all-btn" type="reset">Clear all completed</button>
 	</div>
 </body>
 </html>
