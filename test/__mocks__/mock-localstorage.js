@@ -1,0 +1,3 @@
+const getLocalStorage = () => {
+  const localStorage = [];
+};
