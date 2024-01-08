@@ -28,6 +28,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.27.5",
+    "file-loader": "^6.2.0",
     "gh-pages": "^5.0.0",
     "hint": "^7.1.3",
     "html-webpack-plugin": "^5.5.0",
@@ -49,10 +50,10 @@
     "clean": true,
     "publicPath": "/"
   },
-	"devServer": {
+  "devServer": {
     "static": "./dist"
   },
-	"optimization": {
+  "optimization": {
     "runtimeChunk": "single"
   }
 }
